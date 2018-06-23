@@ -56,7 +56,7 @@ close (FILE);
 if (grep(/^name$/o, @header) == 0)
 {
 #Post error that the column 'name' doesn't exist.
- print ("Error: The column 'name' doesn't exist in $fileName, .\n");
+ print ("Error: The column 'name' doesn't exist in '$fileName', abort the process.\n");
 }
 #Connect to database only if the column 'name' exists
 else

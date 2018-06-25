@@ -55,7 +55,7 @@ close (FILE);
 #$Check if the column 'name' exists
 if (grep(/^name$/o, @header) == 0)
 {
-#Post error that the column 'name' doesn't exist.
+#Post an error that the column 'name' doesn't exist.
  print ("Error: The column 'name' doesn't exist in '$fileName', abort the process.\n");
 }
 #Connect to database only if the column 'name' exists
@@ -66,7 +66,7 @@ else
  my $host = "localhost";
  my $port = "3306";
  my $user = "user";
- my $password = "123456";
+ my $password = "password";
  my $dsn = "DBI:mysql:database=$db;host=$host;port=$port";
  #Connect to database
  my $dbh = DBI->connect($dsn, $user, $password, {'RaiseError' => 1})or die "Unable to connect: $DBI::errstr\n";

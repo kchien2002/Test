@@ -23,7 +23,7 @@ my $db = "test";
 my $host = "localhost";
 my $port = "3306";
 my $user = "user";
-my $password = "123456";
+my $password = "password";
 my $dsn = "DBI:mysql:database=$db;host=$host;port=$port";
 my $dbh = DBI->connect($dsn, $user, $password, {'RaiseError' => 1})or die "Unable to connect: $DBI::errstr\n";
 print "Opened database successfully!\n";
